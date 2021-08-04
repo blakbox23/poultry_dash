@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  capital: 1
+  feed: MyString
+  s_date: 2021-08-03
+  e_date: 2021-08-03
+  s_chick: MyString
+  e_chick: MyString
+  gross: 1
+  trans: 1
+  labour: 1
+  other: 1
+
+two:
+  capital: 1
+  feed: MyString
+  s_date: 2021-08-03
+  e_date: 2021-08-03
+  s_chick: MyString
+  e_chick: MyString
+  gross: 1
+  trans: 1
+  labour: 1
+  other: 1

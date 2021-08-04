@@ -1,0 +1,32 @@
+<div class = "home-container">
+<div class ="home-center">
+  <div class = "home-center-header">
+  OPINIONS
+  </div>
+
+  <div class = "add-post-form rounded">
+    <%= form_with model: @opinion, url: "/home", method: :post do |f| %>
+    <div class = "m-3">
+    
+    <%= f.label :text, "What is your opinion" %><br />
+    </div>
+    <div class = "m-2">
+    <%= f.text_field :text, placeholder: "Post opinion", id: "post" %>
+    <%= f.submit "Post"%>
+    </div>
+  <%end%>
+  </div>
+
+  <div class = "post-list">
+  <%= @count %> OPINIONS
+  <hr>
+
+ 
+
+</div>
+</div>
+
+
+
+
+</div>
