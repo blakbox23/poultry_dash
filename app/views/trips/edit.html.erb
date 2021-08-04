@@ -1,0 +1,22 @@
+<div class = "home-container">
+<div class ="home-center">
+<h1>Create New Trip</h1>
+<%= form_with model: @trip, url: trip_path(@trip.id), method: :patch do |form|%>
+    <%= form.label :e_date, "Date:"%>
+    <%= form.date_field :e_date%><br><br>
+
+    <%= form.label :gross, "Gross:"%>
+    <%= form.text_field :gross%><br><br>
+
+    <%= form.label :e_chick, "Chicks:"%>
+    <%= form.text_field :e_chick%><br><br>
+
+    <%= form.label :trans, "Transport:"%>
+    <%= form.text_field :trans%><br><br>
+
+    <%= form.submit "Complete trip" %>
+
+    <%end%>
+
+    </div> 
+    </div> 
