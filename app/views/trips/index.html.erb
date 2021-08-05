@@ -1,33 +1,84 @@
 <div class = "home-container">
 <div class ="home-center">
   <div class = "home-center-header">
-  Trips
+  TRIPS
   </div>
 
 
 
   <div class = "post-list">
 
-  <hr>
+ 
   <% @trips.each do |trip| %>
     <%if trip.gross == nil%>
-    <div>
-    <p> Date : <%= trip.s_date %> </p>
-    <p> Capital : <%= trip.capital%> </p>
-    <p> Chicks :<%= trip.s_chick%> </p>
-    <p> Feed :<%= trip.feed%> </p>
-    <%= link_to 'End', edit_trip_path(trip.id)%>
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Status</th>
+      <th scope="col">Start date</th>
+      <th scope="col">Capital</th>
+      <th scope="col">Chicks</th>
+      <th scope="col">Feed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     
+      <td>In Progress</td>
+      <td> <%= trip.s_date %> </td>
+      <td><%= trip.capital%> </td>
+      <td><%= trip.s_chick%> </td>
+      <td><%= trip.feed%> </td>
+    </tr>
+
+    <tr>
+    <td class = "fw-bold"><%= link_to 'End trip', edit_trip_path(trip.id) %></td>
+    </tr>
+  
+  </tbody>
+</table>
     <hr>
    </div>
+   <hr>
    <%else%>
-   <div>
-    <p> Period : <%= trip.s_date %> </p>
-    <p> Capital : <%= trip.capital%> </p>
-    <p> Chicks :<%= trip.s_chick%> </p>
-    <p> Gross :<%= trip.gross%> </p>
+
+   <div class = "post-list">
+
+    <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Status</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Gross</th>
+        <th scope="col">Chicks</th>
+        <th scope="col">Feed</th>
+        <th scope="col">Survival (%)</th>
+        <th scope="col">Expenses</th>
+        <th scope="col">Net</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       
+        <td>Done</td>
+        <td> <%= trip.s_date %> </td>
+        <td><%= trip.gross%> </td>
+        <td><%= trip.e_chick%> </td>
+        <td><%= trip.feed%> </td>
+        <td><%= mortality_rate(trip) %>% </td>
+        <td>Exp </td>
+        <td><%= net_profit(trip)%> </td>
+      </tr>
+  
+     
     
-    <hr>
+    </tbody>
+  </table>
    </div>
+
+   
    <%end%>
  <%end%>
  </div>
