@@ -5,16 +5,16 @@
 <%= form_with model: @trip do |form|%>
 
     <%= form.label :s_date, "Date:"%><br>
-    <%= form.date_field :s_date%><br><br>
+    <%= form.date_field :s_date,  required: true%><br><br>
     
     <%= form.label :capital, "Capital:"%><br>
-    <%= form.text_field :capital%><br><br>
+    <%= form.text_field :capital,  required: true%><br><br>
 
     <%= form.label :s_chick, "Chicks:"%><br>
-    <%= form.text_field :s_chick%><br><br>
+    <%= form.text_field :s_chick,  required: true%><br><br>
 
     <%= form.label :feed, "Feeds:"%><br>
-    <%= form.text_field :feed%><br><br>
+    <%= form.text_field :feed,  required: true%><br><br>
 
     <%= form.submit "Create trip" %>
    

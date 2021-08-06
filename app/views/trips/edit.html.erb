@@ -7,16 +7,16 @@
     <%= form.date_field :e_date%><br><br>
 
     <%= form.label :gross, "Gross (Ksh)"%><br>
-    <%= form.text_field :gross%><br><br>
+    <%= form.text_field :gross,  required: true%><br><br>
 
     <%= form.label :e_chick, "Chicks:"%><br>
-    <%= form.text_field :e_chick%><br><br>
+    <%= form.text_field :e_chick,  required: true%><br><br>
 
     <%= form.label :trans, "Transport:"%><br>
-    <%= form.text_field :trans%><br><br>
+    <%= form.text_field :trans,  required: true%><br><br>
 
     <%= form.label :labour, "Labour:"%><br>
-    <%= form.text_field :labour%><br><br>
+    <%= form.text_field :labour,  required: true%><br><br>
 
 
     <%= form.label :other, "Other:"%><br>
