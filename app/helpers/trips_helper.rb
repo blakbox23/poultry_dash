@@ -1,5 +1,5 @@
 module TripsHelper
-    def mortality_rate(trip)
+    def survival_rate(trip)
       (trip.e_chick.to_f / trip.s_chick.to_f).round(2) * 100
     end
 
@@ -11,5 +11,7 @@ module TripsHelper
     def net_profit(trip)
         net = trip.gross.to_i - expense(trip)
     end
+
+   
 
 end

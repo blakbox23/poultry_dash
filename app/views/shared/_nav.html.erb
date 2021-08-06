@@ -31,14 +31,15 @@
 
   <div class = "nav-following d-flex">
     <div class="following link-txt">
-    <div class="nav-num"> Followings count </div>
+    SURVIVAL RATE TARGET
+    <div class="nav-num"> 94%</div>
     
-      following
+   
     </div>
 
     <div class = "followers link-txt">
-    <div class="nav-num"> Followers count</div>
-      followers
+    DAYS LEFT TO END TRIP (approximately)
+    <div class="nav-num"> <%= days_left(Trip.last)%> </div>
     </div>
   </div>
   <div class = "nav-links">
