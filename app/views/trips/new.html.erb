@@ -1,22 +1,24 @@
 <div class = "home-container">
-<div class ="home-center">
-<h1>Create New Trip</h1>
+<div class="trip-form">
+<h3 class="text-center">Create New Trip</h3>
+<p class="mb-3 text-center">You are about to start a new "trip." Fill the form below to continue.</p>
 <%= form_with model: @trip do |form|%>
-    <%= form.label :s_date, "Date:"%>
-    <%= form.date_field :s_date%><br><br>
 
-    <%= form.label :capital, "Capital:"%>
+    <%= form.label :s_date, "Date:"%><br>
+    <%= form.date_field :s_date%><br><br>
+    
+    <%= form.label :capital, "Capital:"%><br>
     <%= form.text_field :capital%><br><br>
 
-    <%= form.label :s_chick, "Chicks:"%>
+    <%= form.label :s_chick, "Chicks:"%><br>
     <%= form.text_field :s_chick%><br><br>
 
-    <%= form.label :feed, "Feeds:"%>
+    <%= form.label :feed, "Feeds:"%><br>
     <%= form.text_field :feed%><br><br>
 
     <%= form.submit "Create trip" %>
-
+   
     <%end%>
-
     </div> 
+
     </div> 
