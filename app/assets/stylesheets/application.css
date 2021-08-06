@@ -31,7 +31,7 @@
   .login-bg {
     width: 100%;
     min-height: 100vh;
-    background-image: url('https://source.unsplash.com/CTbTIyZOk88');
+    /* background-image: url('https://source.unsplash.com/CTbTIyZOk88'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
