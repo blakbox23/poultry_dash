@@ -16,11 +16,13 @@ module ApplicationHelper
     end
 
     def days_left(trip)
+      if !Trip.last 
+        return 0
+      elsif trip.gross == nil
       days_elapsed = Date.today - trip.s_date
       days_left = 35 - days_elapsed
-      days_left.to_f.to_i
-      
+      return days_left.to_f.to_i
+      end
 
-      # puts "-----Date today--#{Date.today.day}---Days elapsed-#{days_elapsed}--------"
     end
   end
