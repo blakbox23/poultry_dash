@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'trips/index'
+  devise_for :users
+  resources :users
+  resources :trips
+
+  root to: "trips#index"
 end

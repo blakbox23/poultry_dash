@@ -1,0 +1,30 @@
+<div class = "home-container">
+<div class="trip-form">
+<h3 class="text-center">End Current Trip</h3>
+<p class="mb-3 text-center">You are about to end your current "trip." Fill the form below to continue.</p>
+<%= form_with model: @trip, url: trip_path(@trip.id), method: :patch do |form|%>
+    <%= form.label :e_date, "Date:"%><br>
+    <%= form.date_field :e_date%><br><br>
+
+    <%= form.label :gross, "Gross (Ksh)"%><br>
+    <%= form.text_field :gross,  required: true%><br><br>
+
+    <%= form.label :e_chick, "Chicks:"%><br>
+    <%= form.text_field :e_chick,  required: true%><br><br>
+
+    <%= form.label :trans, "Transport:"%><br>
+    <%= form.text_field :trans,  required: true%><br><br>
+
+    <%= form.label :labour, "Labour:"%><br>
+    <%= form.text_field :labour,  required: true%><br><br>
+
+
+    <%= form.label :other, "Other:"%><br>
+    <%= form.text_field :other%><br><br>
+
+    <%= form.submit "Complete trip" %>
+
+    <%end%>
+
+    </div> 
+    </div> 

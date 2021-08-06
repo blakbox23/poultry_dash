@@ -1,0 +1,91 @@
+<div class = "home-container">
+<div class ="home-center">
+  <div class = "home-center-header">
+  TRIPS
+  </div>
+
+
+
+  <div class = "post-list">
+
+ 
+  <% @trips.each do |trip| %>
+    <%if trip.gross == nil%>
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Status</th>
+      <th scope="col">Start date</th>
+      <th scope="col">Capital</th>
+      <th scope="col">Chicks</th>
+      <th scope="col">Feed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     
+      <td>In Progress</td>
+      <td> <%= trip.s_date %> </td>
+      <td><%= trip.capital%> </td>
+      <td><%= trip.s_chick%> </td>
+      <td><%= trip.feed%> </td>
+    </tr>
+
+    <tr>
+    <td class = "fw-bold"><%= link_to 'End trip', edit_trip_path(trip.id) %></td>
+    </tr>
+  
+  </tbody>
+</table>
+    <hr>
+   </div>
+   <hr>
+   <%else%>
+
+   <div class = "post-list">
+
+    <table class="table">
+    <thead>
+      <tr>
+        
+        <th scope="col">Status</th>
+        <th scope="col">End Date</th>
+        <th scope="col">Gross</th>
+        <th scope="col">Chicks</th>
+        <th scope="col">Feed</th>
+        <th scope="col">Survival (%)</th>
+        <th scope="col">Expenses</th>
+        <th scope="col">Net</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+       
+        <td>Done</td>
+        <td> <%= trip.e_date %> </td>
+        <td><%= trip.gross%> </td>
+        <td><%= trip.e_chick%> </td>
+        <td><%= trip.feed%> </td>
+        <td><%= survival_rate(trip) %>% </td>
+        <td><%= expense(trip) %></td>
+        <td><%= net_profit(trip)%> </td>
+      </tr>
+  
+     
+    
+    </tbody>
+  </table>
+   </div>
+
+   
+   <%end%>
+ <%end%>
+ </div>
+</div>
+</div>
+
+
+
+
+</div>
